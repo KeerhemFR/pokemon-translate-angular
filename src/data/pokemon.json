@@ -1,0 +1,25 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type1": "Plant",
+      "type2": "Poison",
+      "generation": 1
+    },
+    {
+      "id": 4,
+      "name": "Charmender",
+      "type1": "Fire",
+      "type2": null,
+      "generation": 1
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "type1": "Water",
+      "type2": null,
+      "generation": 1
+    }
+  ]
+}

@@ -2,21 +2,27 @@
   "pokemon": [
     {
       "id": 1,
-      "name": "Bulbasaur",
+      "nameEn": "Bulbasaur",
+      "nameFr": "Bulbizarre",
+      "nameJp": "フシギダネ",
       "type1": "Plant",
       "type2": "Poison",
       "generation": 1
     },
     {
       "id": 4,
-      "name": "Charmender",
+      "nameEn": "Charmender",
+      "nameFr": "Salamèche",
+      "nameJp": "ヒトカゲ",
       "type1": "Fire",
       "type2": null,
       "generation": 1
     },
     {
       "id": 7,
-      "name": "Squirtle",
+      "nameEn": "Squirtle",
+      "nameFr": "Carapuce",
+      "nameJp": "ゼニガメ",
       "type1": "Water",
       "type2": null,
       "generation": 1

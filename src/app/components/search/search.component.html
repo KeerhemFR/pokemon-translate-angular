@@ -1,1 +1,19 @@
-<p>search works!</p>
+<input type="text" name="search" [(ngModel)]="searchText" />
+
+<div>
+  <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+    <li>{{ poke.nameEn }}</li>
+  </ul>
+</div>
+<hr />
+<div>
+  <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+    <li>{{ poke.nameFr }}</li>
+  </ul>
+</div>
+<hr />
+<div>
+  <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+    <li>{{ poke.nameJp }}</li>
+  </ul>
+</div>

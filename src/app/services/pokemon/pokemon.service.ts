@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
+
+import { PokemonApi } from 'src/app/interface/pokemon/pokemon';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +14,12 @@ export class PokemonService {
 
   constructor(private http: HttpClient) {}
 
-  getPokemon() {
-    return this.http.get<any>(this.pokemonUrl);
+  getPokemon(): Observable<PokemonApi> {
+    return this.http.get<PokemonApi>(this.pokemonUrl).pipe(
+      catchError((err) => {
+        console.error(err);
+        return throwError(err);
+      })
+    );
   }
 }

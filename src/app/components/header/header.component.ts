@@ -8,5 +8,5 @@ import * as content from '../../../data/content.json';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  content = content;
+  content: any = content;
 }

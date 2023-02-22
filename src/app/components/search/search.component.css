@@ -19,3 +19,7 @@
   padding: 10px;
   border-radius: 10px
 }
+
+.searchList li {
+  text-transform: capitalize;
+}

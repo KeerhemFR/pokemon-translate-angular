@@ -4,20 +4,28 @@
 
 <div class="dflex">
   <div class="searchList">
-    <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+    <ul *ngFor="let poke of pokemon.pokemon">
       <li>{{ poke.nameEn }}</li>
     </ul>
   </div>
   <hr />
   <div class="searchList">
-    <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+    <ul *ngFor="let poke of pokemon.pokemon">
       <li>{{ poke.nameFr }}</li>
     </ul>
   </div>
   <hr />
   <div class="searchList">
-    <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+    <ul *ngFor="let poke of pokemon.pokemon">
       <li>{{ poke.nameJp }}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="dflex">
+  <div class="searchList">
+    <ul *ngFor="let poke of receivedPokemon | filter : searchText">
+      <li>{{ poke.name }}</li>
     </ul>
   </div>
 </div>

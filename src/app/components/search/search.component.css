@@ -1,0 +1,21 @@
+.dflex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 20px
+}
+
+.inputList {
+  width: 300px;
+  border: 2px #6F1F1F solid;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+.searchList{
+  width: 30%;
+  border: 2px #6F1F1F solid;
+  padding: 10px;
+  border-radius: 10px
+}

@@ -1,19 +1,23 @@
-<input type="text" name="search" [(ngModel)]="searchText" />
+<div class="dflex">
+  <input class="inputList" type="text" name="search" [(ngModel)]="searchText" />
+</div>
 
-<div>
-  <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
-    <li>{{ poke.nameEn }}</li>
-  </ul>
-</div>
-<hr />
-<div>
-  <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
-    <li>{{ poke.nameFr }}</li>
-  </ul>
-</div>
-<hr />
-<div>
-  <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
-    <li>{{ poke.nameJp }}</li>
-  </ul>
+<div class="dflex">
+  <div class="searchList">
+    <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+      <li>{{ poke.nameEn }}</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="searchList">
+    <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+      <li>{{ poke.nameFr }}</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="searchList">
+    <ul *ngFor="let poke of pokemon.pokemon | filter : searchText">
+      <li>{{ poke.nameJp }}</li>
+    </ul>
+  </div>
 </div>

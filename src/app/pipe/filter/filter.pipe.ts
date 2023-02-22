@@ -5,17 +5,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
   transform(value: any, input: string): any {
-    console.log('pipe value', value);
-    console.log('input value', input);
     if (input) {
-      return value.filter(
-        (val: any) =>
-          val.nameFr.toLowerCase().includes(input) ||
-          val.nameEn.toLowerCase().includes(input) ||
-          val.nameJp.includes(input)
-      );
+      return value
+        .filter(
+          (val: any) =>
+            val.nameFr.toLowerCase().includes(input.toLocaleLowerCase()) ||
+            val.nameEn.toLowerCase().includes(input.toLocaleLowerCase()) ||
+            val.nameJp.includes(input)
+        )
+        .slice(0, 10);
     } else {
-      return value;
+      return value.slice(0, 10);
     }
   }
 }

@@ -9,3 +9,18 @@ export interface PokemonApi {
   previous: string | null;
   results: PokemonUrl[];
 }
+
+export interface ApiNames {
+  language: {
+    name: string;
+    url: string;
+  };
+  name: string;
+}
+
+export interface PokemonNames {
+  id: number;
+  nameFr: ApiNames;
+  nameEn: ApiNames;
+  nameJp: ApiNames;
+}

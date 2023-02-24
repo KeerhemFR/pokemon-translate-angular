@@ -22,4 +22,13 @@ export class PokemonService {
       })
     );
   }
+
+  getPokemonById(url: string): Observable<any> {
+    return this.http.get<any>(url).pipe(
+      catchError((err) => {
+        console.error(err);
+        return throwError(err);
+      })
+    );
+  }
 }

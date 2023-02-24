@@ -1,31 +1,31 @@
-<div class="dflex">
-  <input class="inputList" type="text" name="search" [(ngModel)]="searchText" />
-</div>
+<div *ngIf="pokemonNames.length && pokemonNames.length === 1008; else loading">
+  <div class="dflex">
+    <input
+      class="inputList"
+      type="text"
+      name="search"
+      [(ngModel)]="searchText"
+    />
+  </div>
 
-<div class="dflex">
-  <div class="searchList">
-    <ul *ngFor="let poke of pokemon.pokemon">
-      <li>{{ poke.nameEn }}</li>
-    </ul>
-  </div>
-  <hr />
-  <div class="searchList">
-    <ul *ngFor="let poke of pokemon.pokemon">
-      <li>{{ poke.nameFr }}</li>
-    </ul>
-  </div>
-  <hr />
-  <div class="searchList">
-    <ul *ngFor="let poke of pokemon.pokemon">
-      <li>{{ poke.nameJp }}</li>
-    </ul>
-  </div>
-</div>
-
-<div class="dflex">
-  <div class="searchList">
-    <ul *ngFor="let poke of receivedPokemon | filter : searchText">
-      <li>{{ poke.name }}</li>
-    </ul>
+  <div class="dflex">
+    <div class="searchList">
+      <ul *ngFor="let poke of pokemonNames | filter : searchText">
+        <li>{{ poke.nameFr.name | titlecase }}</li>
+      </ul>
+    </div>
+    <div class="searchList">
+      <ul *ngFor="let poke of pokemonNames | filter : searchText">
+        <li>{{ poke.nameEn.name | titlecase }}</li>
+      </ul>
+    </div>
+    <div class="searchList">
+      <ul *ngFor="let poke of pokemonNames | filter : searchText">
+        <li>{{ poke.nameJp.name | titlecase }}</li>
+      </ul>
+    </div>
   </div>
 </div>
+<ng-template #loading>
+  <p class="dflex">Loading</p>
+</ng-template>
